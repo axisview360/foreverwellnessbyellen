@@ -617,41 +617,151 @@ footer ul li a:hover { color:var(--champagne); }
 @media(max-width:768px) {
   nav.desktop { display:none; }
   .hamburger { display:flex; }
-  body { padding-bottom:62px; }
+  body { padding-bottom:65px; }
   .bottom-nav { display:flex; }
-  .header-wrap { padding:0 1rem; }
+  .header-wrap { padding:0 0.9rem; height:60px; }
+  .logo-mark { width:46px; height:46px; }
+  .logo-mark img { width:100%; height:100%; }
+  .logo-text h1 { font-size:1.05rem; }
+  .logo-text p { font-size:0.55rem; letter-spacing:2px; }
+
+  /* HERO — compact on mobile */
   .hero { grid-template-columns:1fr; min-height:auto; }
-  .hero-left { padding:4rem 1.5rem 3rem; }
-  .hero h2 { font-size:2.6rem; }
-  .hero-desc { max-width:100%; }
-  .hero-actions { flex-direction:column; }
-  .btn-primary,.btn-ghost { width:100%; justify-content:center; padding:17px; min-height:54px; }
-  .hero-stats { gap:2rem; }
+  .hero-left { padding:2.5rem 1.2rem 2.2rem; }
+  .hero-eyebrow { margin-bottom:1rem; }
+  .eyebrow-text { font-size:0.6rem; }
+  .hero h2 { font-size:2rem; margin-bottom:0.8rem; }
+  .hero-desc { font-size:0.85rem; line-height:1.65; margin-bottom:1.5rem; }
+  .hero-actions { flex-direction:column; gap:0.7rem; }
+  .btn-primary,.btn-ghost { width:100%; justify-content:center; padding:15px; min-height:50px; font-size:0.78rem; }
+  .hero-stats { gap:1.5rem; margin-top:1.8rem; }
+  .hstat strong { font-size:1.8rem; }
+  .hstat span { font-size:0.6rem; }
   .hero-right { display:none; }
   .hero-divider { display:none; }
-  .trust-bar-inner { gap:1.5rem; }
+
+  /* TRUST BAR — horizontal scroll on mobile */
+  .trust-bar-inner { gap:0; justify-content:flex-start; overflow-x:auto; flex-wrap:nowrap; padding:1rem 1.2rem; scrollbar-width:none; }
+  .trust-bar-inner::-webkit-scrollbar { display:none; }
+  .trust-item { flex-shrink:0; padding:0 1rem; border-right:1px solid var(--border); }
+  .trust-item:last-child { border-right:none; }
   .trust-divider { display:none; }
-  .shop-section, .bundles-section, .process-section, .why-section, .testi-section, .contact-section, .philosophy { padding:4rem 1rem; }
-  .product-grid { grid-template-columns:1fr 1fr; gap:1px; }
-  .product-img-wrap { height:160px; }
-  .product-body { padding:1rem; }
-  .product-footer { flex-direction:column; align-items:stretch; gap:8px; padding:0.8rem 1rem 1rem; }
-  .p-price { font-size:1.3rem; }
-  .btn-add { width:100%; justify-content:center; }
-  .bundles-grid { grid-template-columns:1fr; gap:1.5rem; }
-  .process-grid { grid-template-columns:1fr 1fr; }
-  .process-step { border-bottom:1px solid var(--border); padding:2rem 1.5rem; }
-  .why-grid { grid-template-columns:1fr 1fr; }
-  .testi-grid { grid-template-columns:1fr; }
-  .contact-inner { grid-template-columns:1fr; gap:3rem; }
-  .demo-card { position:static; }
-  .footer-top { grid-template-columns:1fr; gap:2rem; }
-  .footer-bottom { flex-direction:column; text-align:center; }
+  .trust-text strong { font-size:0.72rem; }
+  .trust-text span { font-size:0.62rem; }
+
+  /* SECTIONS — tighter padding */
+  .shop-section { padding:2.5rem 0.8rem; }
+  .bundles-section, .process-section, .why-section, .testi-section, .contact-section, .faq-section { padding:2.8rem 1rem; }
+  .philosophy { padding:2.8rem 1.2rem; }
+  .sec-header { margin-bottom:2rem; }
+  .sec-header h2 { font-size:1.7rem; }
+  .sec-header p { font-size:0.82rem; }
+
+  /* CAT TABS */
+  .cat-tabs { margin-bottom:1.2rem; }
+  .cat-tab { font-size:0.68rem; padding:8px 13px; letter-spacing:1px; }
+
+  /* ════════════════════════════════
+     PRODUCT GRID — 2 columns, compact cards
+  ════════════════════════════════ */
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+  .product-img-wrap { height: 130px; }
+  .product-img-wrap img { padding: 10px; }
+  .p-badge { font-size:0.55rem; padding:3px 7px; top:7px; left:7px; }
+  .product-body { padding: 0.65rem 0.7rem 0.4rem; }
+  .p-cat { font-size:0.56rem; letter-spacing:1.5px; margin-bottom:0.3rem; }
+  .p-name { font-size:0.88rem; margin-bottom:0.2rem; line-height:1.2; }
+  .p-size { font-size:0.6rem; margin-bottom:0.2rem; }
+  .p-desc { font-size:0.7rem; line-height:1.45; -webkit-line-clamp:2; }
+  .product-footer {
+    padding: 0.5rem 0.7rem 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    margin-top: 0.4rem;
+  }
+  .p-price { font-size:1.1rem; }
+  .btn-add {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.68rem;
+    padding: 9px;
+    letter-spacing: 1px;
+    min-height: 36px;
+  }
+
+  /* BUNDLES */
+  .bundles-grid { grid-template-columns:1fr; gap:1.2rem; }
+  .bundle-top { padding:1.2rem 1.2rem 0.8rem; }
+  .bundle-top h3 { font-size:1.2rem; }
+  .bundle-body { padding:1rem 1.2rem; }
+  .bundle-list li { font-size:0.8rem; padding:5px 0; }
+  .bundle-foot { padding:0.8rem 1.2rem 1.2rem; }
+  .bundle-price { font-size:1.6rem; }
+
+  /* PROCESS */
+  .process-grid { grid-template-columns:1fr 1fr; border:none; gap:1px; background:var(--border); }
+  .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.5rem 1rem; }
+  .process-num { font-size:2.8rem; margin-bottom:0.5rem; }
+  .process-step h4 { font-size:0.8rem; }
+  .process-step p { font-size:0.72rem; }
+
+  /* WHY */
+  .why-grid { grid-template-columns:1fr 1fr; gap:1px; }
+  .why-card { padding:1.5rem 1rem; }
+  .why-icon-wrap { width:40px; height:40px; font-size:1rem; margin-bottom:0.8rem; }
+  .why-card h4 { font-size:0.8rem; }
+  .why-card p { font-size:0.72rem; }
+
+  /* TESTIMONIALS */
+  .testi-grid { grid-template-columns:1fr; gap:1rem; }
+  .testi-card { padding:1.5rem; }
+  .testi-text { font-size:0.95rem; }
+
+  /* FAQ */
+  .faq-grid { grid-template-columns:1fr; gap:1.5rem; }
+  .faq-q { font-size:0.84rem; padding:1rem 0; }
+  .faq-a p { font-size:0.8rem; }
+
+  /* CONTACT */
+  .contact-inner { grid-template-columns:1fr; gap:2rem; }
+  .contact-left h2 { font-size:1.8rem; }
+  .contact-left p { font-size:0.85rem; }
+  .contact-btn { padding:0.9rem 1rem; min-height:62px; }
+  .contact-btn-text strong { font-size:0.88rem; }
+  .contact-btn-text span { font-size:0.72rem; }
+  .demo-card { position:static; padding:1.8rem 1.2rem; }
+  .demo-card h3 { font-size:1.5rem; }
+
+  /* CART PANEL */
   .cart-panel { width:100%; border-radius:0; }
+  .cart-header { padding:1.1rem 1.2rem; }
+  .cart-items { padding:0.6rem; }
+  .cart-footer { padding:1rem 1.2rem; }
+
+  /* FOOTER */
+  .footer-top { grid-template-columns:1fr 1fr; gap:1.5rem; }
+  .foot-brand { grid-column:1/-1; }
+  .footer-bottom { flex-direction:column; text-align:center; gap:0.5rem; }
+  footer { padding:3rem 1.2rem 1.5rem; }
+  footer h4 { font-size:0.6rem; margin-bottom:0.8rem; }
+  footer ul li a { font-size:0.78rem; }
+  footer ul li { margin-bottom:0.4rem; }
+
+  /* PHILOSOPHY */
+  .philosophy blockquote { font-size:1.3rem; }
 }
+
 @media(max-width:400px) {
-  .product-grid { grid-template-columns:1fr; }
-  .hero h2 { font-size:2.1rem; }
+  .hero h2 { font-size:1.75rem; }
+  .product-grid { grid-template-columns:1fr 1fr; gap:1px; }
+  .product-img-wrap { height:115px; }
+  .p-name { font-size:0.82rem; }
+  .footer-top { grid-template-columns:1fr; }
+  .why-grid { grid-template-columns:1fr 1fr; }
 }
 
 /* ══════════════════════════════════════
@@ -1315,7 +1425,7 @@ footer ul li a:hover { color:var(--champagne); }
           <span class="contact-btn-icon">💬</span>
           <div class="contact-btn-text"><strong>Facebook Messenger</strong><span>Fastest response · replies in minutes</span></div>
         </a>
-        <a href="https://wa.me/639XXXXXXXXX?text=Hi%20Ellen!%20I%20want%20to%20order%20Forever%20Living%20products." target="_blank" class="contact-btn wa">
+        <a href="https://wa.me/639273223676?text=Hi%20Ellen!%20I%20want%20to%20order%20Forever%20Living%20products." target="_blank" class="contact-btn wa">
           <span class="contact-btn-icon">📱</span>
           <div class="contact-btn-text"><strong>WhatsApp</strong><span>+63 9XX XXX XXXX</span></div>
         </a>
@@ -1338,10 +1448,10 @@ footer ul li a:hover { color:var(--champagne); }
           <button class="ctoggle" id="ct3" onclick="switchContact('both')">Both</button>
         </div>
       </div>
-      <div class="cfield on" id="cf1"><div class="form-field"><label>Mobile Number</label><input type="tel" placeholder="09XX XXX XXXX" id="demoPhone"></div></div>
+      <div class="cfield on" id="cf1"><div class="form-field"><label>Mobile Number</label><input type="tel" placeholder="0927 322 3676" id="demoPhone"></div></div>
       <div class="cfield" id="cf2"><div class="form-field"><label>Email Address</label><input type="email" placeholder="you@email.com" id="demoEmail"></div></div>
       <div class="cfield" id="cf3" style="display:none;">
-        <div class="form-field"><label>Mobile Number</label><input type="tel" placeholder="09XX XXX XXXX" id="demoPhone2"></div>
+        <div class="form-field"><label>Mobile Number</label><input type="tel" placeholder="0927 322 3676" id="demoPhone2"></div>
         <div class="form-field"><label>Email Address</label><input type="email" placeholder="you@email.com" id="demoEmail2"></div>
       </div>
       <div class="form-field">
@@ -1466,7 +1576,7 @@ footer ul li a:hover { color:var(--champagne); }
         <div class="order-row total"><span>Total</span><span id="modalTotal">₱0</span></div>
       </div>
       <div class="mform-field"><label>Full Name</label><input type="text" placeholder="Juan dela Cruz" id="coName"></div>
-      <div class="mform-field"><label>Mobile Number</label><input type="tel" placeholder="09XX XXX XXXX" id="coPhone"></div>
+      <div class="mform-field"><label>Mobile Number</label><input type="tel" placeholder="0927 322 3676" id="coPhone"></div>
       <div class="mform-field"><label>Full Address</label><input type="text" placeholder="Street, Barangay, Davao City" id="coAddr"></div>
       <div class="mform-field"><label>Delivery Option</label>
         <select id="coDelivery">
@@ -1525,14 +1635,14 @@ footer ul li a:hover { color:var(--champagne); }
       </div>
       <div class="qr-account-info" id="qrAccountInfo">
         <div class="qr-info-row"><span>Account Name</span><strong>Ellen M. [Surname]</strong></div>
-        <div class="qr-info-row"><span>GCash Number</span><strong>09XX XXX XXXX</strong></div>
+        <div class="qr-info-row"><span>GCash Number</span><strong>0927 322 3676</strong></div>
       </div>
       <div class="qr-warning">
         ⚠️ Do not type the number manually. Always scan the QR code to avoid sending to the wrong account. After payment, send your transaction screenshot to Ellen via Messenger or WhatsApp.
       </div>
       <div class="qr-modal-actions">
         <button class="qr-msg-btn fb" onclick="window.open('https://www.facebook.com/share/1HpJsgS2Em/','_blank')">💬 Send Screenshot on Messenger</button>
-        <button class="qr-msg-btn wa" onclick="window.open('https://wa.me/639XXXXXXXXX?text=Hi%20Ellen!%20I%20have%20paid%20my%20order.%20Sending%20screenshot%20now.','_blank')">📱 Send Screenshot on WhatsApp</button>
+        <button class="qr-msg-btn wa" onclick="window.open('https://wa.me/639273223676?text=Hi%20Ellen!%20I%20have%20paid%20my%20order.%20Sending%20screenshot%20now.','_blank')">📱 Send Screenshot on WhatsApp</button>
         <button class="qr-close-bottom" onclick="closeQR()">✕ &nbsp; Close</button>
       </div>
     </div>
@@ -1761,8 +1871,8 @@ function selectPay(el,method){
 let currentPayMethod='cod';
 
 const QR_DATA = {
-  gcash: { label:'GCash Payment', title:'Scan to Pay via GCash', logo:'G', logoBg:'linear-gradient(135deg,#00a8e0,#007ab8)', app:'GCash', account:'Ellen M. [Surname]', number:'09XX XXX XXXX', data:'GCASH:09XXXXXXXXX' },
-  maya:  { label:'Maya Payment',  title:'Scan to Pay via Maya',  logo:'M', logoBg:'linear-gradient(135deg,#6c3fc5,#4a2a9a)', app:'Maya', account:'Ellen M. [Surname]', number:'09XX XXX XXXX', data:'MAYA:09XXXXXXXXX' },
+  gcash: { label:'GCash Payment', title:'Scan to Pay via GCash', logo:'G', logoBg:'linear-gradient(135deg,#00a8e0,#007ab8)', app:'GCash', account:'Ellen M. [Surname]', number:'0927 322 3676', data:'GCASH:09273223676' },
+  maya:  { label:'Maya Payment',  title:'Scan to Pay via Maya',  logo:'M', logoBg:'linear-gradient(135deg,#6c3fc5,#4a2a9a)', app:'Maya', account:'Ellen M. [Surname]', number:'0927 322 3676', data:'MAYA:09273223676' },
   bank:  { label:'Bank Transfer', title:'Scan to Pay via Bank',  logo:'B', logoBg:'linear-gradient(135deg,#1C3A2D,#2E5742)', app:'banking', account:'Ellen M. [Surname]', number:'Acct: XXXX-XXXX-XXXX', data:'BDO:XXXXXXXXXXXX' },
 };
 
@@ -1864,7 +1974,7 @@ function getOrderText(){
   t+=`\n*Total: ₱${total.toLocaleString()}*\n\nPlease confirm my order. Thank you!`;
   return encodeURIComponent(t);
 }
-function checkoutWhatsApp(){window.open('https://wa.me/639XXXXXXXXX?text='+getOrderText(),'_blank');}
+function checkoutWhatsApp(){window.open('https://wa.me/639273223676?text='+getOrderText(),'_blank');}
 function checkoutMessenger(){window.open('https://www.facebook.com/share/1HpJsgS2Em/','_blank');}
 function submitOrder(){
   const name=document.getElementById('coName').value;
@@ -1878,7 +1988,7 @@ function submitOrder(){
   cart.forEach(i=>{msg+=`• ${i.name} ×${i.qty} = ₱${(i.price*i.qty).toLocaleString()}\n`;});
   msg+=`\n*TOTAL: ₱${total.toLocaleString()}*`;
   if(notes)msg+=`\n*Notes:* ${notes}`;
-  window.open('https://wa.me/639XXXXXXXXX?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/639273223676?text='+encodeURIComponent(msg),'_blank');
   closeCheckout();
   cart=[];updateCartUI();
   document.getElementById('cartOverlay').classList.remove('open');
