@@ -359,8 +359,8 @@ nav.desktop a:hover::after { transform:scaleX(1); }
 .bundle-list li::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--rose); flex-shrink:0; }
 
 .bundle-foot { padding:1.2rem 2rem 1.8rem; display:flex; align-items:center; justify-content:space-between; }
-.bundle-price { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:var(--sage); line-height:1; }
-.bundle-save { font-size:0.7rem; color:var(--rose); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
+.bundle-price { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:#ffffff; line-height:1; }
+.bundle-save { font-size:0.7rem; color:var(--rose-light); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
 
 /* ══════════════════════════════════════
    PROCESS / HOW TO ORDER
@@ -789,10 +789,12 @@ footer ul li a:hover { color:var(--champagne); }
   padding:1.1rem 0; cursor:pointer; display:flex; align-items:center;
   justify-content:space-between; gap:1rem; font-family:'Inter',sans-serif;
   font-size:0.88rem; font-weight:500; color:var(--champagne); line-height:1.4;
-  transition:color 0.2s;
+  transition:color 0.2s; -webkit-tap-highlight-color:transparent;
 }
-.faq-q:hover { color:var(--sage); }
-.faq-q.open { color:var(--sage); }
+.faq-q:hover { color:var(--rose-light); }
+.faq-q:focus { outline:none; color:var(--champagne); }
+.faq-q:active { color:var(--champagne); background:none; }
+.faq-q.open { color:var(--rose-light); }
 .faq-arrow {
   font-size:1.3rem; color:var(--rose); flex-shrink:0;
   transition:transform 0.25s; line-height:1; font-weight:300;
